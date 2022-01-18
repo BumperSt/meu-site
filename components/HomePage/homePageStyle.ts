@@ -10,6 +10,11 @@ export const AlignCenter = styled.div`
     justify-content: center;
     text-align: start;
     height: 80%;
+    @media (max-width:700px ){
+        flex-direction: column;
+        text-align: center;
+
+    }
     
 
 `
@@ -24,6 +29,10 @@ export const HabilityText = styled.div`
         transform: scale(1.2);
         cursor: pointer;
     }
+    @media (max-width:700px ){
+        font-size: 1.5rem;
+        padding: .5rem;
+    }
     
 
 `
@@ -34,6 +43,12 @@ export const  HomePageText = styled.h1`
     max-width:50%;
     border-right: 20px solid white;
     align-self: center;
+    @media (max-width:700px ){
+        max-width:100%;
+        border-right: 0px;
+        border-bottom: 15px solid white;
+        font-size: 2rem;
+    }
 
 `
 export const AlignRow = styled.div`

@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <>
-      <Container   id="home">
+      <Container id="home">
         <AlignCenter>
           <HomePageText>DESENVOLVEDOR FULL STACK</HomePageText>
           <AlignCollum>

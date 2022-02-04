@@ -12,14 +12,16 @@ export const ProjectsPage = () => {
             descreption:"Liga das lendas é um site para ver dados em gerais sobre o jogo league of legends.",
             indexImage:"/ligadaslendas/capa.png",
             github:"https://github.com/BumperSt/liga-das-lendas-client",
-            projectUrl:"https://ligadaslendas.vercel.app/"
+            projectUrl:"https://ligadaslendas.vercel.app/",
+            id:0
         },
         {
             name:"Watch Together",
             descreption:"Watch Together é um aplicativo desktop para assistir filmes/séries usando o sistema torrent",
             indexImage:"/watchtogether/capa.png",
             github:"https://github.com/BumperSt/SeeMovieBack",
-            projectUrl:null
+            projectUrl:null,
+            id:1
         },
     ]
 
@@ -31,7 +33,7 @@ export const ProjectsPage = () => {
             <AlignProjects>
                 {
                     myProject.map((project) => (
-                        <ProjectDiv>
+                        <ProjectDiv key={project.id}>
                             <ProjectImageDiv>
                                 <Image src={project.indexImage} layout="fill" title={project.name} alt="Imagem do projeto"/>
                             </ProjectImageDiv>
@@ -41,10 +43,10 @@ export const ProjectsPage = () => {
                             </ProjectDescreption>
                             <AlingIcon>
 
-                                <Image  onClick={()=> window.open(project.github, "_blank")} src="/github.png" width="80" height="50"/>
+                                <Image  onClick={()=> window.open(project.github, "_blank")} src="/github.png" width="80" height="50" alt="link do github"/>
                                 {
                                     project.projectUrl && 
-                                    <Image onClick={()=> window.open(project.projectUrl, "_blank")}  src="/siteIcon.png" width="50" height="0"/>
+                                    <Image onClick={()=> window.open(project.projectUrl, "_blank")}  src="/siteIcon.png" width="50" height="0" alt="link do projeto"/>
 
                                 }
 

@@ -64,8 +64,8 @@ export const AlignCollum = styled.div`
 `
 
 export const BackgroudImage = styled.div`
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
     position: fixed;
     top: 0;
     left: 0;

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const HeadBarContainer = styled.div`
+    align-items: center;
+
     width:100%;
     background-color:black;
     padding:.5rem;
@@ -12,10 +14,13 @@ export const HeadBarContainer = styled.div`
     flex-direction:row;
     color:white;
     padding-inline:6rem;
+    padding-block:1rem;
     justify-content: center;
     text-align: start;
     position: fixed;
     top: 0;
+    z-index: 110;
+
 `
 
 export const HeaderTitle = styled.h1`

@@ -10,7 +10,7 @@ export const ProjectsPage = () => {
         {
             name:"Liga das lendas",
             descreption:"Liga das lendas é um site para ver dados em gerais sobre o jogo league of legends.",
-            indexImage:"/ligadaslendas/capa.png",
+            indexImage:"/ligadaslendas/capa.PNG",
             github:"https://github.com/BumperSt/liga-das-lendas-client",
             projectUrl:"https://ligadaslendas.vercel.app/",
             id:0

@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 100%;
     height:100vh;
-    background-color:black;
     padding:4rem;
     text-align:start;
 
@@ -19,4 +18,9 @@ export const MyProjectsTitle = styled.h1`
         font-size: 2rem;
     }
     margin-bottom: 1rem;
+`
+
+export const AboutText = styled.h1`
+    font-size: 3rem;
+    color: white;
 `

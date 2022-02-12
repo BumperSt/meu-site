@@ -1,10 +1,28 @@
+import useOnScreen from "helpers/isVisible";
 import Image from "next/image"
+import { useEffect, useRef } from "react";
 import { BackgroudImage } from "../HomePage/homePageStyle"
 import { AlignProjects, AlingIcon, Container, MyProjectsTitle, ProjectDescreption, ProjectDiv, ProjectImageDiv, ProjectTitle } from "./projectsStyle"
 
 
 
-export const ProjectsPage = () => {
+interface Props {
+    setAcutualPage:any
+}
+
+
+export const ProjectsPage = ({setAcutualPage} : Props) => {
+
+    const elementRef = useRef<HTMLDivElement>(null);
+    const isOnScreen = useOnScreen(elementRef);
+  
+    console.log({isOnScreen});
+
+    useEffect(() => {
+        if(isOnScreen){
+            setAcutualPage('projects')
+        }
+    }, [isOnScreen])
 
     const myProject = [
         {
@@ -29,8 +47,7 @@ export const ProjectsPage = () => {
     return(
         <Container id="projects">
             <MyProjectsTitle>Meus Projetos</MyProjectsTitle>
-
-            <AlignProjects>
+            <AlignProjects  ref={elementRef}>
                 {
                     myProject.map((project) => (
                         <ProjectDiv key={project.id}>

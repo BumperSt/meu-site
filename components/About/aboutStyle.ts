@@ -5,17 +5,26 @@ export const Container = styled.div`
     height:100vh;
     padding:4rem;
     text-align:start;
-
+    @media (max-width:700px ){
+        padding: 1rem;
+    }
 `
 
 export const MyProjectsTitle = styled.h1`
     font-size: 6rem;
     color: white;
-    @media (max-width:700px ){
+    border-bottom: 10px solid white;
+    margin-top: 1%;
+
+    @media (max-width:1280px ){
         max-width:100%;
-        border-right: 0px;
         border-bottom: 10px solid white;
-        font-size: 2rem;
+        font-size: 2.5rem;
+
+    }
+    @media (max-width:700px ){
+        margin-top: 20%;
+
     }
     margin-bottom: 1rem;
 `
@@ -23,4 +32,8 @@ export const MyProjectsTitle = styled.h1`
 export const AboutText = styled.h1`
     font-size: 3rem;
     color: white;
+    @media (max-width:1280px ){
+        font-size: 2rem;
+
+    }
 `

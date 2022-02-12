@@ -14,11 +14,18 @@ export const Container = styled.div`
 export const MyProjectsTitle = styled.h1`
     font-size: 6rem;
     color: white;
-    @media (max-width:700px ){
+    border-bottom: 10px solid white;
+    margin-top: 1%;
+
+    @media (max-width:1280px ){
         max-width:100%;
-        border-right: 0px;
         border-bottom: 10px solid white;
-        font-size: 2rem;
+        font-size: 2.5rem;
+
+    }
+    @media (max-width:700px ){
+        margin-top: 20%;
+
     }
     margin-bottom: 1rem;
 `
@@ -43,10 +50,10 @@ export const ProjectDiv = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 5rem;
-    margin-top: 5rem;
+    margin-right: .5rem;
+    margin-top:1rem;
     :hover{
-        transform:scale(1.5);
+        transform:scale(1.2);
         z-index: 100;
         background-color:rgba(0,0,0);
     }
@@ -68,11 +75,11 @@ export const ProjectDiv = styled.div`
 
 
 export const ProjectImageDiv = styled.div`
-    width: 26.6rem;
+    width: 100%;
     height: 15rem;
-    @media (max-width:700px ){
+    @media (max-width:1280px ){
         width: 100%;
-        height: 12rem;
+        height: 9rem;
     }
     position: relative;
 
@@ -83,13 +90,16 @@ export const ProjectTitle = styled.h1`
 `
 
 export const ProjectDescreption = styled.p`
-    max-width:26rem;
+    max-width:25rem;
     margin: 0;
+    @media (max-width:1280px ){
+        max-width:15rem;
+
+    }
     font-size: .9rem;
 `
 
 export const AlingIcon = styled.div`
-    padding-inline:5rem;
     display:flex;
     flex-direction: row;
     justify-content:space-around;

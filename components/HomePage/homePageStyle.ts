@@ -10,7 +10,8 @@ export const AlignCenter = styled.div`
     justify-content: center;
     text-align: start;
     height: 80%;
-    @media (max-width:700px ){
+    padding: 1rem;
+    @media (max-width:1280px){
         flex-direction: column;
         text-align: center;
 
@@ -21,45 +22,50 @@ export const AlignCenter = styled.div`
 
 export const HabilityText = styled.div`
     font-size: 4rem;
-    padding: 1rem;
-    margin-inline: 1rem;
     color: white;
     transition: all 0.5s;
     :hover{
         transform: scale(1.2);
         cursor: pointer;
     }
-    @media (max-width:700px ){
-        font-size: 1.5rem;
-        padding: .5rem;
+    @media (max-width:1280px ){
+        font-size: 2rem;
+        padding-inline: .25rem;
     }
+    margin-inline:.5rem;
     
 
 `
 
 export const  HomePageText = styled.h1`
-    font-size: 6rem;
+    font-size: 5rem;
     color: white;
-    max-width:50%;
-    border-right: 20px solid white;
+    max-width:40%;
+    margin-right: 1rem;
     align-self: center;
-    @media (max-width:700px ){
-        max-width:100%;
+    border-right: 15px solid white;
+    padding-inline:1rem;
+    @media (max-width:1280px ){
+        margin-top: 5rem;
         border-right: 0px;
         border-bottom: 15px solid white;
-        font-size: 2rem;
+        font-size: 3rem;
+        max-width:100%;
+
     }
 
 `
 export const AlignRow = styled.div`
     display:flex;
     flex-direction: row;
+    width: 100%;
 
 `
 export const AlignCollum = styled.div`
     display:flex;
     flex-direction: column;
     align-self: center;
+
     
 `
 

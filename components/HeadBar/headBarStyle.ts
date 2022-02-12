@@ -2,13 +2,11 @@ import styled from "styled-components";
 
 export const HeadBarContainer = styled.div`
     align-items: center;
-
     width:100%;
     background-color:black;
     padding:.5rem;
     @media (max-width:700px ){
         padding:.5rem;
-
     }
     display: flex;
     flex-direction:row;
@@ -25,8 +23,11 @@ export const HeadBarContainer = styled.div`
 
 export const HeaderTitle = styled.h1`
     font-size: 1.5rem;
+    @media (max-width:1280px ){
+        font-size: 1rem;
+    }
     @media (max-width:700px ){
-        font-size: .5rem;
+        font-size: .8rem;
     }
     width:40%;
 `
@@ -37,7 +38,7 @@ export const AlignCenter = styled.div`
     align-items: center;
 `
 
-export const ButtonHeader = styled.button`
+export const ButtonHeader = styled.button<{active:boolean}>`
     background-color:transparent;
     margin-inline: 3rem;
     border:0px;
@@ -52,10 +53,19 @@ export const ButtonHeader = styled.button`
         color:black;
         background-color:white;
     }
-    @media (max-width:700px ){
-        font-size: .5rem;
+    ${({active}) => active &&`
+            cursor:pointer;
+            transform:scale(1.2);
+            color:black;
+            background-color:white;
+    `}
+    @media (max-width:1280px ){
+        font-size: 1rem;
         margin-inline: 1rem;
 
+    }
+    @media (max-width:700px ){
+        font-size: .8rem;
     }
 
 `

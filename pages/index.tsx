@@ -3,6 +3,7 @@ import { HeadBar } from "@/components/HeadBar/headBar"
 import { AlignCenter, AlignCollum, AlignRow, BackgroudImage, Container, HabilityText, HomePageText } from "@/components/HomePage/homePageStyle"
 import { ProjectsPage } from "@/components/Projects/projects"
 import useOnScreen from "helpers/isVisible"
+import Head from "next/head"
 import { useEffect, useRef, useState } from "react"
 
 
@@ -21,8 +22,11 @@ const Home = () => {
 
   return (
     <>
+      <Head>
+        <title>Gabriel Mesquita</title>
+      </Head>
       <HeadBar actualPage={actualPage} setAcutualPage={setAcutualPage}/>
-
+      
       <Container id="home">
         <AlignCenter>
           <HomePageText ref={elementRef}>DESENVOLVEDOR FULL STACK</HomePageText>

@@ -103,6 +103,8 @@ export const AlingIcon = styled.div`
     display:flex;
     flex-direction: row;
     justify-content:space-around;
+    align-items: flex-end;
+
     width:100%;
     span{
         transition: all .5s;
@@ -111,7 +113,15 @@ export const AlingIcon = styled.div`
             cursor:pointer;
             transform:scale(1.2);
         }
+    }   
+`
+
+export const OpenProjectByUrl = styled.h3`
+    transition: all .5s;
+
+    :hover{
+        cursor:pointer;
+        transform:scale(1.5);
     }
 
-    
 `

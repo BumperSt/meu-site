@@ -2,7 +2,7 @@ import useOnScreen from "helpers/isVisible";
 import Image from "next/image"
 import { useEffect, useRef } from "react";
 import { BackgroudImage } from "../HomePage/homePageStyle"
-import { AlignProjects, AlingIcon, Container, MyProjectsTitle, ProjectDescreption, ProjectDiv, ProjectImageDiv, ProjectTitle } from "./projectsStyle"
+import { AlignProjects, AlingIcon, Container, MyProjectsTitle, OpenProjectByUrl, ProjectDescreption, ProjectDiv, ProjectImageDiv, ProjectTitle } from "./projectsStyle"
 
 
 
@@ -56,14 +56,15 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
                             </ProjectImageDiv>
                             <ProjectTitle>{project.name}</ProjectTitle>
                             <ProjectDescreption>
-                            {project.descreption}
+                                {project.descreption}
                             </ProjectDescreption>
                             <AlingIcon>
 
                                 <Image  onClick={()=> window.open(project.github, "_blank")} src="/github.png" width="80" height="50" alt="link do github"/>
                                 {
                                     project.projectUrl && 
-                                    <Image onClick={()=> window.open(project.projectUrl, "_blank")}  src="/siteIcon.png" width="50" height="0" alt="link do projeto"/>
+                                    <OpenProjectByUrl onClick={()=> window.open(project.projectUrl, "_blank")}>Abrir Site</OpenProjectByUrl>
+
 
                                 }
 

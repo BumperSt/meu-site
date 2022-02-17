@@ -25,7 +25,8 @@ export const AboutPage = ({setAcutualPage} : Props) => {
         <Container id="about">
             <MyProjectsTitle ref={elementRef}   >Sobre</MyProjectsTitle>
             <AboutText>
-                Meu nome é Gabriel Mesquita, sou programador full stack... estou a 8 anos estudando programação. sempre conhecendo novas técnlogias e se atualizando
+                Meu nome é Gabriel Mesquita, sou programador full stack... estou a 8 anos estudando programação. sempre conhecendo novas técnlogias e me atualizando.
+                Trabalho de freelancer no workana a 2 anos.
             </AboutText>
             <BackgroudImage style={{
           backgroundImage:'url(/backgroundHome.jpg)'

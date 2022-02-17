@@ -60,7 +60,7 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
                             </ProjectDescreption>
                             <AlingIcon>
 
-                                <Image  onClick={()=> window.open(project.github, "_blank")} src="/github.png" width="80" height="50" alt="link do github"/>
+                                <Image title="Abrir GitHub"  onClick={()=> window.open(project.github, "_blank")} src="/github.png" width="80" height="50" alt="link do github"/>
                                 {
                                     project.projectUrl && 
                                     <OpenProjectByUrl onClick={()=> window.open(project.projectUrl, "_blank")}>Abrir Site</OpenProjectByUrl>

@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    padding:4rem;
-    text-align:start;
+    padding-block:4rem;
+
     min-height:100vh;
     @media (max-width:700px ){
         padding: 1rem;
@@ -12,7 +12,7 @@ export const Container = styled.div`
 `
 
 export const MyProjectsTitle = styled.h1`
-    font-size: 6rem;
+    font-size: 56px;
     color: white;
     border-bottom: 10px solid white;
     margin-top: 1%;

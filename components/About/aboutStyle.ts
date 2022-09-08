@@ -3,15 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 100%;
     height:100vh;
-    padding:4rem;
-    text-align:start;
+    padding-block:4rem;
     @media (max-width:700px ){
         padding: 1rem;
     }
 `
 
 export const MyProjectsTitle = styled.h1`
-    font-size: 6rem;
+    font-size: 2.5rem;
     color: white;
     border-bottom: 10px solid white;
     margin-top: 1%;
@@ -29,8 +28,8 @@ export const MyProjectsTitle = styled.h1`
     margin-bottom: 1rem;
 `
 
-export const AboutText = styled.h1`
-    font-size: 3rem;
+export const AboutText = styled.p`
+    font-size: 2rem;
     color: white;
     @media (max-width:1280px ){
         font-size: 2rem;

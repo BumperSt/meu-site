@@ -17,6 +17,10 @@
     "paths": {
       "@/components/*": [
         "components/*"
+      ],
+      "@/styles/*": [
+        "styles/*"
+      
       ]
     },
     "incremental": true

@@ -1,6 +1,6 @@
 import { AboutPage } from "@/components/About/about"
 import { HeadBar } from "@/components/HeadBar/headBar"
-import { AlignCenter, AlignCollum, AlignRow, BackgroudImage, Container, HabilityText, HomePageText } from "@/components/HomePage/homePageStyle"
+import { AlignCenter, AlignCollum, AlignRow, BackgroudImage, HomeContainer, HabilityText, HomePageText, Container } from "@/components/HomePage/homePageStyle"
 import { ProjectsPage } from "@/components/Projects/projects"
 import useOnScreen from "helpers/isVisible"
 import Head from "next/head"
@@ -21,13 +21,13 @@ const Home = () => {
   }, [isOnScreen])
 
   return (
-    <>
+    <Container>
       <Head>
         <title>Gabriel Mesquita</title>
       </Head>
       <HeadBar actualPage={actualPage} setAcutualPage={setAcutualPage}/>
       
-      <Container id="home">
+      <HomeContainer id="home">
         <AlignCenter>
           <HomePageText ref={elementRef}>DESENVOLVEDOR FULL STACK</HomePageText>
           <AlignCollum>
@@ -47,11 +47,11 @@ const Home = () => {
         <BackgroudImage style={{
           backgroundImage:'url(/backgroundHome.jpg)'
         }}/>
-      </Container>
+      </HomeContainer>
       <ProjectsPage setAcutualPage={setAcutualPage}/>
       <AboutPage setAcutualPage={setAcutualPage}/>
 
-   </>
+   </Container>
   )
 }
 

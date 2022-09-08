@@ -22,6 +22,7 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
         if(isOnScreen){
             setAcutualPage('projects')
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isOnScreen])
 
     const myProject = [
@@ -31,7 +32,7 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
             indexImage:"/ligadaslendas/capa.PNG",
             github:"https://github.com/BumperSt/liga-das-lendas-client",
             projectUrl:"https://ligadaslendas.vercel.app/",
-            id:0
+
         },
         {
             name:"Watch Together",
@@ -39,8 +40,18 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
             indexImage:"/watchtogether/capa.png",
             github:"https://github.com/BumperSt/SeeMovieBack",
             projectUrl:null,
-            id:1
+
         },
+    ]
+
+    const freelaProject = [
+        {
+            name:"Giro Blaze",
+            descreption:"Giro Blaze é um site que mostra o histórico do site blaze dos jogos double e crash.",
+            indexImage:"/giroblaze/capa.png",
+            github:"",
+            projectUrl:"https://giroblaze.com/",
+        }
     ]
 
 
@@ -49,8 +60,40 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
             <MyProjectsTitle>Meus Projetos</MyProjectsTitle>
             <AlignProjects  ref={elementRef}>
                 {
-                    myProject.map((project) => (
-                        <ProjectDiv key={project.id}>
+                    myProject.map((project, index) => (
+                        <ProjectDiv key={index}>
+                            <ProjectImageDiv>
+                                <Image src={project.indexImage} layout="fill" title={project.name} alt="Imagem do projeto"/>
+                            </ProjectImageDiv>
+                            <ProjectTitle>{project.name}</ProjectTitle>
+                            <ProjectDescreption>
+                                {project.descreption}
+                            </ProjectDescreption>
+                            <AlingIcon>
+                                {
+                                    project.github != "" &&
+                                    <Image title="Abrir GitHub"  onClick={()=> window.open(project.github, "_blank")} src="/github.png" width="80" height="50" alt="link do github"/>
+
+                                }
+                                {
+                                    project.projectUrl && 
+                                    <OpenProjectByUrl onClick={()=> window.open(project.projectUrl, "_blank")}>Abrir Site</OpenProjectByUrl>
+
+
+                                }
+
+                            </AlingIcon>
+                            
+                        </ProjectDiv>
+                    ))
+                }
+               
+            </AlignProjects>
+            <MyProjectsTitle>Projetos Freelancer</MyProjectsTitle>
+            <AlignProjects  ref={elementRef}>
+                {
+                    freelaProject.map((project, index) => (
+                        <ProjectDiv key={index}>
                             <ProjectImageDiv>
                                 <Image src={project.indexImage} layout="fill" title={project.name} alt="Imagem do projeto"/>
                             </ProjectImageDiv>
@@ -60,8 +103,11 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
                             </ProjectDescreption>
                             <AlingIcon>
 
-                                <Image title="Abrir GitHub"  onClick={()=> window.open(project.github, "_blank")} src="/github.png" width="80" height="50" alt="link do github"/>
                                 {
+                                    project.github != "" &&
+                                    <Image title="Abrir GitHub"  onClick={()=> window.open(project.github, "_blank")} src="/github.png" width="80" height="50" alt="link do github"/>
+
+                                }                                {
                                     project.projectUrl && 
                                     <OpenProjectByUrl onClick={()=> window.open(project.projectUrl, "_blank")}>Abrir Site</OpenProjectByUrl>
 

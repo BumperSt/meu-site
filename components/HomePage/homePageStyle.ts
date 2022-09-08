@@ -1,6 +1,16 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-inline:50px;
+    gap:100px;
+`
+
+
+export const HomeContainer = styled.div`
     width: 100%;
     height: 100vh;
 `
@@ -8,7 +18,8 @@ export const AlignCenter = styled.div`
     display:flex;
     flex-direction: row;
     justify-content: center;
-    text-align: start;
+    align-items: center;
+    text-align: center;
     height: 80%;
     padding: 1rem;
     @media (max-width:1280px){

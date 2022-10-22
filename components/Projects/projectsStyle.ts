@@ -14,12 +14,10 @@ export const Container = styled.div`
 export const MyProjectsTitle = styled.h1`
     font-size: 56px;
     color: white;
-    border-bottom: 10px solid white;
     margin-top: 1%;
 
     @media (max-width:1280px ){
         max-width:100%;
-        border-bottom: 10px solid white;
         font-size: 2.5rem;
 
     }
@@ -45,20 +43,34 @@ export const AlignProjects = styled.div`
     }
 `
 
+export const ProjectAbsoluteDiv = styled.div`
+    position: absolute;
+    width: 95%;
+    left:50%;
+    transform: translateX(-50%);
+    height:20px;
+    top:-20px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #B12AC7;
+`
+
 
 export const ProjectDiv = styled.div`
     display:flex;
+    z-index:1;
     flex-direction: column;
     align-items: center;
+    position: relative;
     margin-right: .5rem;
     margin-top:1rem;
     :hover{
         transform:scale(1.2);
         z-index: 100;
-        background-color:rgba(0,0,0);
+        background-color:#703E78;
     }
-    background-color:rgba(0,0,0,0.5);
-    transition: all .5s;
+    background-color:#703E78;
+    border-radius: 6px;
     text-align:center;
     padding: 1rem;
     @media (max-width:700px ){
@@ -107,7 +119,6 @@ export const AlingIcon = styled.div`
 
     width:100%;
     span{
-        transition: all .5s;
 
         :hover{
             cursor:pointer;
@@ -117,7 +128,6 @@ export const AlingIcon = styled.div`
 `
 
 export const OpenProjectByUrl = styled.h3`
-    transition: all .5s;
 
     :hover{
         cursor:pointer;

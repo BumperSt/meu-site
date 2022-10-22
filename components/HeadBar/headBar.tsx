@@ -11,19 +11,25 @@ interface Props {
 }
 
 export const HeadBar = ({actualPage, setAcutualPage} : Props) => {  
-    
+    const [showBar, setShowBar] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
     const pages = [
         {
-            name:'Inicio',
-            url:'home'
+            name:'About',
+            url:'about'
         },
         {
-            name:'Projetos',
+            name:'Habilitys',
+            url:'habilitys'
+        },
+        {
+            name:'Projects',
             url:'projects'
         },
         {
-            name:'Sobre',
-            url:'about'
+            name:'Contact',
+            url:'contact'
         }
     ]
 
@@ -36,9 +42,42 @@ export const HeadBar = ({actualPage, setAcutualPage} : Props) => {
         }, 200);
     }
 
+
+    const controlNavbar = () => {
+      if (typeof window !== "undefined") {
+        if (window.scrollY > lastScrollY) {
+          setShowBar(false);
+        } else {
+          setShowBar(true);
+        }
+  
+        // remember current page location to use in the next move
+        setLastScrollY(window.scrollY);
+      }
+    };
+  
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        window.addEventListener("scroll", controlNavbar);
+  
+        // cleanup function
+        return () => {
+          window.removeEventListener("scroll", controlNavbar);
+        };
+      }
+    }, [lastScrollY]);
+
     return(
-        <HeadBarContainer >
-            <HeaderTitle>Gabriel Mesquita:FullStack</HeaderTitle>
+        <HeadBarContainer  style={
+            showBar
+              ? {
+                  top: "0",
+                }
+              : {
+                  top: "-100%",
+                }
+          }>
+            <HeaderTitle onClick={() => changePage('home')}><span>{"</"}</span>Gabriel Mesquita<span>{">"}</span></HeaderTitle>
             <AlignCenter>
                 {
                     pages.map((pages, idKey) => (

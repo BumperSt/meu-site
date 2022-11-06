@@ -34,8 +34,8 @@ export const AboutPage = ({setAcutualPage} : Props) => {
             }}><span>{"<"}</span>Um pouco sobre mim<span>{">"}</span></SubTitle>
 
             <AboutText>
-                Meu nome é Gabriel Mesquita, sou programador full stack... estou a 8 anos estudando programação. sempre conhecendo novas técnlogias e me atualizando.
-                Trabalho de freelancer no workana a 2 anos.
+                Meu nome é Gabriel Mesquita tenho 19 anos, sou programador full stack. Estou a 9 anos estudando programação. Sempre conhecendo novas técnlogias e me atualizando.
+                Trabalho de freelancer no workana a 3 anos.
             </AboutText>
             </AlignCollum>
             <AlignCollum style={{
@@ -48,9 +48,7 @@ export const AboutPage = ({setAcutualPage} : Props) => {
                 </ImageDivExternal>
             </AlignCollum>
 
-            <BackgroudImage style={{
-          backgroundImage:'url(/backgroundHome.jpg)'
-        }}/>
+ 
         </Container>
     )
 }

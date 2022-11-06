@@ -81,15 +81,9 @@ export const Habilitys = ({setAcutualPage} : Props) => {
 
     return(
         <Container id="habilitys" style={{
-            paddingTop:'500px'
+            paddingTop:'300px'
         }}>
-                    <FilterDivElipseAbsolute style={{
-                        top:'50%'
-                    }}/>
-        <FilterDivElipseAbsolute style={{
-            top:'50%',
-          transform:'rotate(90deg) translateY(25%)',
-        }}/>
+
             <LeftBackground>
                 <Image src="/leftBackground.png" width={412} height={558} alt="background"/>
                 <div style={{
@@ -121,9 +115,7 @@ export const Habilitys = ({setAcutualPage} : Props) => {
                         ))
                     }                
             </AlignHabilitys>
-            <BackgroudImage style={{
-          backgroundImage:'url(/backgroundHome.jpg)'
-        }}/>
+
         </Container>
     )
 }

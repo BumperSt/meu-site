@@ -15,19 +15,14 @@ export const HomeContainer = styled.div`
     height: 100vh;
 `
 export const AlignCenter = styled.div`
-    display:flex;
-    
-    
+    display:flex;    
     flex-direction: row;
     height: 80%;
     justify-content: space-around;
     @media (max-width:1280px){
         flex-direction: column;
         text-align: center;
-
     }
-    
-
 `
 
 export const HabilityText = styled.div`

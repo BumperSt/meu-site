@@ -2,7 +2,7 @@ import useOnScreen from "helpers/isVisible";
 import Image from "next/image"
 import { useEffect, useRef } from "react";
 import { MyProjectsTitle } from "../Habilitys/habilitysStyle";
-import { BackgroudImage } from "../HomePage/homePageStyle"
+import { BackgroudImage, FilterDivElipseAbsolute } from "../HomePage/homePageStyle"
 import { AlignProjects, AlingIcon, Container, OpenProjectByUrl, ProjectAbsoluteDiv, ProjectDescreption, ProjectDiv, ProjectImageDiv, ProjectTitle } from "./projectsStyle"
 
 
@@ -59,6 +59,10 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
     return(
         <Container id="projects">
             <MyProjectsTitle ref={elementRef}><span>{"</"}</span>Projetos <span>{">"}</span></MyProjectsTitle>
+            <FilterDivElipseAbsolute />
+        <FilterDivElipseAbsolute style={{
+          transform:'rotate(90deg) translateY(25%)',
+        }}/>
             <AlignProjects  ref={elementRef}>
                 {
                     myProject.map((project, index) => (
@@ -125,9 +129,7 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
                 }
                
             </AlignProjects>
-            <BackgroudImage style={{
-          backgroundImage:'url(/backgroundHome.jpg)'
-        }}/>
+
         </Container>
     )
 }

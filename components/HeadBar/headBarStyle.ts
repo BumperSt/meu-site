@@ -12,7 +12,7 @@ export const HeadBarContainer = styled.div`
     display: flex;
     flex-direction:row;
     color:white;
-
+    height:100px;
     justify-content: center;
     text-align: start;
     position: fixed;
@@ -46,22 +46,21 @@ export const AlignCenter = styled.div`
 export const ButtonHeader = styled.button<{active:boolean}>`
     background-color:transparent;
     margin-inline: 3rem;
-    border:0px;
+    border:0;
     font-size: 36px;
     color:#C4C4C4;
     font-weight: 700;
+    
     color:white;
     :hover{
         cursor:pointer;
-        transform:scale(1.2);
-        color:black;
-        background-color:white;
+        color:#BA68C8;
+        border-bottom: 4px solid #BA68C8;
     }
     ${({active}) => active &&`
-            cursor:pointer;
-            transform:scale(1.2);
-            color:black;
-            background-color:white;
+        cursor:pointer;
+        color:#BA68C8;
+        border-bottom: 4px solid #BA68C8;
     `}
     @media (max-width:1280px ){
         font-size: 1rem;

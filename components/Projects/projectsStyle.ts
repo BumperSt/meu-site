@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 100%;
     padding-block:4rem;
-
+    position: relative;
     min-height:100vh;
     @media (max-width:700px ){
         padding: 1rem;
@@ -58,6 +58,7 @@ export const ProjectAbsoluteDiv = styled.div`
 
 export const ProjectDiv = styled.div`
     display:flex;
+    filter:drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
     z-index:1;
     flex-direction: column;
     align-items: center;

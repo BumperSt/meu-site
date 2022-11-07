@@ -43,7 +43,7 @@ const Home = () => {
             <ProgramerText>Programador</ProgramerText>
             <div className="gap">
               <HomePageText>Gabriel Mesquita</HomePageText>
-              <Descreption>Sou apaixonado por programação, comecei como um hob e hoje se tornou meu principal trabalho</Descreption>           
+              <Descreption>Sou apaixonado por programação, comecei como um hobby e hoje se tornou meu principal trabalho</Descreption>           
             </div>
           </AlignCollum>
 

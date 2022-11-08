@@ -61,12 +61,15 @@ const Home = () => {
                 left:'100%',
               }}>=<a>=</a></span>
           </div>
+          {
+            width > 768 &&
           <div className="alignCollum" style={{
             
           }}>            
             <Image src="/home/firstLine.png" width={2} height={110} alt="line"/>
 
           </div>
+          }
           <div className="alignCollum" style={{
             
           }}>        
@@ -79,6 +82,8 @@ const Home = () => {
 
             <Image src="/home/firstLine.png" width={2} height={102} alt="line"/>
           </div>
+          {
+            width > 768 &&
           <div className="alignCollum" style={{
             
           }}>          
@@ -89,11 +94,14 @@ const Home = () => {
               }}>{"<"}{"/"}{">"}</span>     
             <Image src="/home/firstLine.png" width={2} height={100} alt="line"/>
           </div>
+          }
           <div className="alignCollum" style={{
             
           }}>            
             <Image src="/home/firstLine.png" width={2} height={85} alt="line"/>
           </div>
+          {
+            width > 768 &&
           <div className="alignCollum" style={{
             
           }}>          
@@ -102,6 +110,7 @@ const Home = () => {
   
             <Image src="/home/firstLine.png" width={2} height={102} alt="line"/>
           </div>
+  }
           <div className="alignCollum" style={{
             
           }}>         
@@ -112,6 +121,8 @@ const Home = () => {
               }}>{"<div>"}</span>      
             <Image src="/home/firstLine.png" width={2} height={72} alt="line"/>
           </div>
+          {
+            width > 768 &&
           <div className="alignCollum" style={{
             
           }}>           
@@ -123,6 +134,7 @@ const Home = () => {
             <Image src="/home/ball.svg" width={16} height={16} alt="line"/>
             <Image src="/home/firstLine.png" width={2} height={47} alt="line"/>
           </div>
+}
           <div className="alignCollum" style={{
             
           }}>            
@@ -134,6 +146,8 @@ const Home = () => {
             <Image src="/home/ball.svg" width={16} height={16} alt="line"/>
             <Image src="/home/firstLine.png" width={2} height={110} alt="line"/>
           </div>
+          {
+            width > 768 &&
           <div className="alignCollum" style={{
             
           }}>            
@@ -144,6 +158,7 @@ const Home = () => {
               }}>{"??"}</span>     
             <Image src="/home/firstLine.png" width={2} height={37} alt="line"/>
           </div>
+}
           <div className="alignCollum" style={{
             
           }}>            

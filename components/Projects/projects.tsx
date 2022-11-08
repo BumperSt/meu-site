@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useEffect, useRef } from "react";
 import { MyProjectsTitle } from "../Habilitys/habilitysStyle";
 import { BackgroudImage, FilterDivElipseAbsolute } from "../HomePage/homePageStyle"
-import { AlignProjects, AlingIcon, Container, OpenProjectByUrl, ProjectAbsoluteDiv, ProjectDescreption, ProjectDiv, ProjectImageDiv, ProjectTitle } from "./projectsStyle"
+import { AcessButton, AlignProjects, AlingIcon, Container, OpenProjectByUrl, ProjectAbsoluteDiv, ProjectDescreption, ProjectDiv, ProjectImageDiv, ProjectTitle } from "./projectsStyle"
 
 
 
@@ -82,7 +82,7 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
                                 }
                                 {
                                     project.projectUrl && 
-                                    <OpenProjectByUrl onClick={()=> window.open(project.projectUrl, "_blank")}>Abrir Site</OpenProjectByUrl>
+                                    <AcessButton onClick={()=> window.open(project.projectUrl, "_blank")}>Acessar</AcessButton>
 
 
                                 }

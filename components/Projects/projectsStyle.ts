@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    padding-block:4rem;
     position: relative;
     min-height:100vh;
     @media (max-width:700px ){
@@ -14,7 +13,7 @@ export const Container = styled.div`
 export const MyProjectsTitle = styled.h1`
     font-size: 56px;
     color: white;
-    margin-top: 1%;
+
 
     @media (max-width:1280px ){
         max-width:100%;
@@ -34,13 +33,34 @@ export const AlignProjects = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap:100px;
+    padding-block: 3rem;
     @media (max-width:700px ){
         flex-direction: column;
         flex-wrap: nowrap;
         width: 100%;
+        
         align-items: center;
 
     }
+`
+
+export const AcessButton = styled.button`
+    width: 100%;
+    background-color: #2C1246;
+    font-size:32px;
+    border:none;
+    border-radius: 6px;
+    @media (max-width:768px ){
+        font-size: 20px;
+    }
+    transition:all .2s;
+    :hover{
+        cursor: pointer;
+        background-color: #2C123A;
+
+    }
+    
 `
 
 export const ProjectAbsoluteDiv = styled.div`
@@ -64,6 +84,7 @@ export const ProjectDiv = styled.div`
     align-items: center;
     position: relative;
     margin-right: .5rem;
+    transition: all .2s;
     margin-top:1rem;
     :hover{
         transform:scale(1.2);
@@ -78,9 +99,9 @@ export const ProjectDiv = styled.div`
         margin-right: 0rem;
         margin-top: 0rem;
         :hover{
-            transform:scale(1);
-            z-index: 100;
-            background-color:rgba(0,0,0);
+            transform:scale(1.2);
+        z-index: 100;
+        background-color:#703E78;
         }
     }
 
@@ -114,10 +135,10 @@ export const ProjectDescreption = styled.p`
 
 export const AlingIcon = styled.div`
     display:flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items: flex-end;
-
+    flex-direction: column;    
+    align-items: center;
+    margin-top:10px;
+    gap:10px;
     width:100%;
     span{
 

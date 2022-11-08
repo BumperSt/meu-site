@@ -75,3 +75,27 @@ export const ButtonHeader = styled.button<{active:boolean}>`
     }
 
 `
+
+export const MenuInMobile = styled.div`
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    padding-top: 20%;
+    padding-inline: 10%;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color: #2C1246;
+`
+
+export const ButtonInMobile = styled.button `
+    border-radius: 6px;
+    border:none;
+    padding:1rem;
+    background-color: #BA68C8;
+    :hover{
+        cursor: pointer;
+    }
+`

@@ -1,4 +1,4 @@
-import { HeadBarContainer, HeaderTitle,AlignCenter, ButtonHeader } from "./headBarStyle"
+import { HeadBarContainer, HeaderTitle,AlignCenter, ButtonHeader, MenuInMobile, ButtonInMobile } from "./headBarStyle"
 import {Link} from 'react-scroll'
 import { useEffect, useRef, useState } from "react"
 import useWindowDimensions from "helpers/screenSize"
@@ -14,6 +14,8 @@ interface Props {
 export const HeadBar = ({actualPage, setAcutualPage} : Props) => {  
     const [showBar, setShowBar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [openMenu, setOpenMenu] = useState(false);
+
     const {width} = useWindowDimensions()
     const pages = [
         {
@@ -28,10 +30,10 @@ export const HeadBar = ({actualPage, setAcutualPage} : Props) => {
             name:'Projects',
             url:'projects'
         },
-        {
-            name:'Contact',
-            url:'contact'
-        }
+        // {
+        //     name:'Contact',
+        //     url:'contact'
+        // }
     ]
 
     const changePage = (pageUrl) => {
@@ -93,8 +95,35 @@ export const HeadBar = ({actualPage, setAcutualPage} : Props) => {
 
           </AlignCenter>
           :
+              <>
+                {
+                  openMenu ? 
+                    <>
+                    <MenuInMobile>
+                      {
+                          pages.map((pages, idKey) => (
+                            <ButtonInMobile key={idKey}  onClick={() => {
+                              setOpenMenu(false) 
+                              changePage(pages.url)}}>{pages.name}</ButtonInMobile>
 
-              <CgMenuRightAlt color="#E6E6E6" size={22}/>
+                      ))
+                      }
+                      
+                    </MenuInMobile>
+                    <div style={{
+                      position:'fixed',
+                      right:'16px',
+                      top:'6px'
+                    }}>
+                    <CgMenuRightAlt onClick={() => setOpenMenu(false)} size={22} style={{ color:'#fff', cursor:'pointer'}}/>
+                    </div>
+                    </>
+                  :
+                    <CgMenuRightAlt onClick={() => setOpenMenu(!openMenu)} color="#E6E6E6" size={22}/>
+                }
+              
+              </>
+              
             }
   
         </HeadBarContainer>

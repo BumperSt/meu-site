@@ -122,7 +122,7 @@ export const FilterDivElipseAbsolute = styled.div`
     top: 0;
     left: 50%;
     transform: translateX(-55%);
-    width: 80%;
+    width: 50%;
     height: 80vh;
     filter: blur(350px);
     background-color: #703E78;

@@ -4,6 +4,7 @@ import { HeadBar } from "@/components/HeadBar/headBar"
 import { AlignCenter, AlignCollum, AlignRow, BackgroudImage, HomeContainer, HabilityText, HomePageText, Container, ProgramerText, Descreption, FilterDivElipseAbsolute, BottomBarStyle } from "@/components/HomePage/homePageStyle"
 import { ProjectsPage } from "@/components/Projects/projects"
 import useOnScreen from "helpers/isVisible"
+import useWindowDimensions from "helpers/screenSize"
 import Head from "next/head"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
@@ -22,7 +23,7 @@ const Home = () => {
                   setAcutualPage('home')
       }
   }, [isOnScreen])
-
+  const {width} = useWindowDimensions()
   return (
     <Container>
       <Head>
@@ -35,7 +36,7 @@ const Home = () => {
           transform:'rotate(90deg) translateY(25%)',
         }}/>
         <AlignCenter ref={elementRef}>
-        <Image src="/homeImage.svg" alt="home" width={542} height={542}/>
+        <Image src="/homeImage.svg" alt="home" width={width > 768 ? 542 : 340} height={width > 768 ? 542 : 340}/>
 
           <AlignCollum style={{
             zIndex:50,

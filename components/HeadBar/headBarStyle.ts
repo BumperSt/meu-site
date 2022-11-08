@@ -5,9 +5,6 @@ export const HeadBarContainer = styled.div`
     width:100%;
     padding-block:60px;
     padding-inline: 112px;
-    @media (max-width:700px ){
-        padding:.5rem;
-    }
     transition: all .5s;
     display: flex;
     flex-direction:row;
@@ -18,6 +15,12 @@ export const HeadBarContainer = styled.div`
     position: fixed;
     top: 0;
     z-index: 110;
+    @media (max-width:700px ){
+        padding:.5rem;
+        padding-inline: 1rem;
+        justify-content: space-between;
+        height:auto;
+    }
 
 `
 

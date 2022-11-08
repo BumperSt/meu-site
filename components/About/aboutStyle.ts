@@ -11,7 +11,7 @@ export const Container = styled.div`
     align-items: center;
     display:flex;
     flex-direction: row;
-        box-shadow: 1px 100px 250px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 100px 250px rgba(0, 0, 0, 0.5);
 `
 
 export const AlignCollum = styled.div`
@@ -19,6 +19,9 @@ export const AlignCollum = styled.div`
     flex-direction: column;
     width:50%;
     gap:17px;
+    @media (max-width:700px ){
+        width: 100%;
+    }
 `
 
 export const MyProjectsTitle = styled.h1`
@@ -27,8 +30,10 @@ export const MyProjectsTitle = styled.h1`
     span{
         color:#2C1246;
     }
-
     margin-bottom: 1rem;
+    @media(max-width: 768px){
+        font-size: 30px;
+    }
 `
 
 export const SubTitle = styled.h1`
@@ -37,13 +42,16 @@ export const SubTitle = styled.h1`
     span{
         color:#BA68C8;
     }
+    @media(max-width: 768px){
+        font-size: 24px;
+    }
 `
 
 export const AboutText = styled.p`
     font-size: 32px;
     color: #FFFFFF;
     @media (max-width:1280px ){
-        font-size: 2rem;
+        font-size: 20px;
 
     }
 `
@@ -59,10 +67,14 @@ export const ImageDiv = styled.div`
     position: relative;
     width: 400px;
     height: 400px;
-    
     display:flex;
     border-radius: 50%;
     span{
         border-radius: 50%;
+    }
+    @media (max-width:768px){
+        width:250px;
+        height:250px;
+
     }
 `

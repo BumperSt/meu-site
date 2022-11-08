@@ -15,14 +15,17 @@ export const Container = styled.div`
     }
 `
 export const MyProjectsTitle = styled.h1`
-margin-top: 200px;
+    margin-top: 200px;
     font-size: 40px;
     color: #E6E6E6;
     span{
         color:#BA68C8;
     }
-
     margin-bottom: 1rem;
+    @media(max-width: 768px){
+        margin-top: 100px;
+        margin-bottom: 5rem;
+    }
 `
 
 
@@ -33,6 +36,11 @@ export const AlignHabilitys = styled.div`
     gap:100px;
     justify-content: center;
     align-items: center;
+    @media (max-width:700px ){
+        gap:30px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
 `
 
 export const HabilitysContainer = styled.div`
@@ -58,6 +66,9 @@ export const HabilityTitle = styled.h1`
     color:#FFFFFF;
     span{
         color: #ba68c8;
+    }
+    @media (max-width:700px ){
+        font-size: 16px;
     }
 `
 export const BarSize = styled.div`

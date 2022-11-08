@@ -5,6 +5,7 @@ import { BackgroudImage, FilterDivElipseAbsolute } from "../HomePage/homePageSty
 import { AlignHabilitys, Container, HabilitysContainer, HabilityTitle, MyProjectsTitle, BarSize, LeftBackground } from "./habilitysStyle"
 import {FaReact} from 'react-icons/fa'
 import { Line } from "rc-progress";
+import useWindowDimensions from "helpers/screenSize";
 
 
 interface Props {
@@ -75,13 +76,15 @@ export const Habilitys = ({setAcutualPage} : Props) => {
         },
 
     ]
-
+    const {width} = useWindowDimensions()
 
 
 
     return(
-        <Container id="habilitys" style={{
+        <Container id="habilitys" style={width > 768 ?{
             paddingTop:'300px'
+        } : {
+            paddingTop:'150px'
         }}>
 
             <LeftBackground>
@@ -108,8 +111,12 @@ export const Habilitys = ({setAcutualPage} : Props) => {
                             <HabilitysContainer key={index}>
                                 <HabilityTitle><span>{"<"}</span>{hability.name}<span>{">"}</span></HabilityTitle>
                                 {hability.icon}
-                                <Line style={{
+                                <Line style={ width > 768 ?{
                                     width:'116px'
+                                } : {
+                                    width:'100px',
+                                    height:'8px'
+                                    
                                 }} percent={loadPercente[index] }  transition="all 20s"  strokeWidth={8} strokeColor={hability.color} trailColor={'#BA68C8'} trailWidth={8} />
                             </HabilitysContainer>
                         ))

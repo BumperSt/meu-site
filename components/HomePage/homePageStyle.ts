@@ -5,6 +5,8 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width:100vw;
+    
 `
 
 
@@ -13,15 +15,25 @@ export const HomeContainer = styled.div`
     position: relative;
     margin-top: 15vh;
     height: 100vh;
+    @media (max-width:700px ){
+        height: fit-content;
+        padding-bottom: 15rem;
+    }
+
 `
 export const AlignCenter = styled.div`
     display:flex;    
     flex-direction: row;
+    padding-inline:114px;
+
     height: 80%;
     justify-content: space-around;
     @media (max-width:1280px){
         flex-direction: column;
         text-align: center;
+    }
+    @media (max-width:700px ){
+        padding: 1rem;
     }
 `
 
@@ -36,6 +48,10 @@ export const HabilityText = styled.div`
         font-size: 2rem;
         padding-inline: .25rem;
     }
+    @media (max-width:720px ){
+        font-size: 1.5rem;
+        padding-inline: .25rem;
+    }
     margin-inline:.5rem;
     
 
@@ -44,10 +60,16 @@ export const HabilityText = styled.div`
 export const ProgramerText = styled.h1`
     color:#DDB4E4;
     font-size:24px;
+    @media (max-width:720px ){
+        font-size: 12px;
+    }
 `
 
 export const  HomePageText = styled.h1`
     font-size:40px;
+    @media (max-width:720px ){
+        font-size: 20px;
+    }
 `
 
 export const Descreption = styled.p`
@@ -55,6 +77,9 @@ export const Descreption = styled.p`
     font-weight: 700;
     width: 80%;
     color:#B8B1BA;
+    @media (max-width:720px ){
+        font-size: 20px;
+    }
 `
 
 export const AlignRow = styled.div`
@@ -71,6 +96,9 @@ export const AlignCollum = styled.div`
     width: 50%;
     .gap{
         gap:8px;
+    }
+    @media (max-width:768px ){
+        width: 100%;
     }
 `
 
@@ -94,12 +122,15 @@ export const FilterDivElipseAbsolute = styled.div`
     top: 0;
     left: 50%;
     transform: translateX(-55%);
-    width: 300px;
+    width: 80%;
     height: 80vh;
     filter: blur(350px);
     background-color: #703E78;
     z-index: 1;
     border-radius: 60%;
+    @media (max-width:768px){
+        left: 0%;
+    }
 
 `
 

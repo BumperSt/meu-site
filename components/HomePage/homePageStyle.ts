@@ -25,13 +25,9 @@ export const AlignCenter = styled.div`
     display:flex;    
     flex-direction: row;
     padding-inline:114px;
-
     height: 80%;
     justify-content: space-around;
-    @media (max-width:1280px){
-        flex-direction: column;
-        text-align: center;
-    }
+
     @media (max-width:700px ){
         padding: 1rem;
     }

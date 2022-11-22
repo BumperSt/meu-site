@@ -65,8 +65,7 @@ export const ImageDivExternal = styled.div`
 
 export const ImageDiv = styled.div`
     position: relative;
-    width: 400px;
-    height: 400px;
+
     display:flex;
     border-radius: 50%;
     span{

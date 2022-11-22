@@ -115,7 +115,7 @@ export const ProjectsPage = ({setAcutualPage} : Props) => {
 
                                 }                                {
                                     project.projectUrl && 
-                                    <OpenProjectByUrl onClick={()=> window.open(project.projectUrl, "_blank")}>Abrir Site</OpenProjectByUrl>
+                                    <AcessButton onClick={()=> window.open(project.projectUrl, "_blank")}>Acessar</AcessButton>
 
 
                                 }

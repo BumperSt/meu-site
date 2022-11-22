@@ -23,7 +23,11 @@ export const AboutPage = ({setAcutualPage} : Props) => {
     }, [isOnScreen])
 
     const {width } = useWindowDimensions()
+    useEffect(() =>{
+        console.log(width)
+    }, [width])
     return(
+        
         <Container style={ width > 768 ? {
             backgroundColor:'#703E7880'
         } : {
@@ -49,7 +53,7 @@ export const AboutPage = ({setAcutualPage} : Props) => {
             }}>
                 <ImageDivExternal>
                     <ImageDiv>
-                        <Image src={"/myImage.jfif"} layout={"fill"} alt="My User Image"/>
+                        <Image src={"/myImage.jpg"} width={350} height={300} alt="My User Image"/>
                         </ImageDiv>
                 </ImageDivExternal>
             </AlignCollum>

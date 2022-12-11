@@ -48,7 +48,7 @@ export const AboutPage = ({setAcutualPage} : Props) => {
                     Trabalho de freelancer no workana a 3 anos.
                 </AboutText>
             </AlignCollum>
-            <AlignCollum style={{
+            {/* <AlignCollum style={{
                 alignItems:'center'
             }}>
                 <ImageDivExternal>
@@ -56,7 +56,7 @@ export const AboutPage = ({setAcutualPage} : Props) => {
                         <Image src={"/myImage.jpg"} width={350} height={300} alt="My User Image"/>
                         </ImageDiv>
                 </ImageDivExternal>
-            </AlignCollum>
+            </AlignCollum> */}
 
  
         </Container>

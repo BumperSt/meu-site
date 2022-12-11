@@ -16,7 +16,7 @@ export const Container = styled.div`
 
 export const AlignCollum = styled.div`
     display:flex;
-    padding-inline: 10rem;
+    padding-block: 10rem;
     flex-direction: column;
     width:50%;
     gap:17px;

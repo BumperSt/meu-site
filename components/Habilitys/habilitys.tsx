@@ -37,10 +37,8 @@ export const Habilitys = ({setAcutualPage} : Props) => {
                 setTimeout(() => {
                     console.log(waitTimeout)
                     setLoadPercente(waitTimeout)
-                }, 200);
+                }, 500);
             }
-        }else{
-            setLoadPercente([])
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isOnScreen])

@@ -48,17 +48,7 @@ export const AboutPage = ({setAcutualPage} : Props) => {
                     Trabalho de freelancer no workana a 3 anos.
                 </AboutText>
             </AlignCollum>
-            {/* <AlignCollum style={{
-                alignItems:'center'
-            }}>
-                <ImageDivExternal>
-                    <ImageDiv>
-                        <Image src={"/myImage.jpg"} width={350} height={300} alt="My User Image"/>
-                        </ImageDiv>
-                </ImageDivExternal>
-            </AlignCollum> */}
 
- 
         </Container>
     )
 }

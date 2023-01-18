@@ -61,19 +61,18 @@ const Home = () => {
                 left:'100%',
               }}>=<a>=</a></span>
           </div>
-          {
-            width > 768 &&
-          <div className="alignCollum" style={{
-            
-          }}>            
-            <Image src="/home/firstLine.png" width={2} height={110} alt="line"/>
+            {
+              width > 768 &&
+            <div className="alignCollum" style={{               
+            }}>            
+              <Image src="/home/firstLine.png" width={2} height={110} alt="line"/>
 
-          </div>
-          }
+            </div>
+            }
           <div className="alignCollum" style={{
             
           }}>        
-                      <span style={{
+            <span style={{
                 position:'absolute',
                 top:'-70%',
                 left:'-200%',
@@ -191,7 +190,7 @@ const Home = () => {
 
             <Image src="/home/firstLine.png" width={2} height={85} alt="line"/>
           </div>
-        </BottomBarStyle>
+          </BottomBarStyle>
         }
 
       </HomeContainer>

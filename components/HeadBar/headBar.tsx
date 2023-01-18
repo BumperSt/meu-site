@@ -30,10 +30,6 @@ export const HeadBar = ({actualPage, setAcutualPage} : Props) => {
             name:'Projects',
             url:'projects'
         },
-        // {
-        //     name:'Contact',
-        //     url:'contact'
-        // }
     ]
 
     const changePage = (pageUrl) => {
@@ -68,6 +64,7 @@ export const HeadBar = ({actualPage, setAcutualPage} : Props) => {
           window.removeEventListener("scroll", controlNavbar);
         };
       }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [lastScrollY]);
 
     return(
